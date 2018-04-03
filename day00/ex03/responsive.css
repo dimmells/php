@@ -1,0 +1,65 @@
+td
+{
+	border: 1px solid black;
+	width: 5%;
+}
+
+figure, h1 {text-align: center;}
+
+#g_and_p, th
+{
+	width: 5%;
+	font-size: 1.2vw;
+}
+
+#symbol 
+{
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 1.2vw;
+}
+
+#number
+{
+	text-align: left;
+	vertical-align: bottom;
+}
+
+#a_weight
+{
+	text-align: right;
+	vertical-align: top;
+}
+
+td {font-size: 1vw;}
+
+#diat_nonmet {background-color: #D8F781;}
+
+#noble_gas {background-color: lightblue;}
+
+#alkali_metal {background-color: #FE642E;}
+
+#al_earth_metal {background-color: #F5DA81}
+
+#metalloid {background-color: #B18904}
+
+#polyat_nonmetal {background-color: #2EFEC8}
+
+#post_trans_metal {background-color: #A4A4A4}
+
+#trans_metal {background-color: #F5A9A9}
+
+#lathanide {background-color: #F5A9F2}
+
+#actinide {background-color: #FA58F4}
+
+#unknow {background-color: #F2F2F2}
+
+#cp
+{
+	text-align: right;
+	font-style: italic;
+	font-family: monospace;
+	font-size: 1vw;
+}

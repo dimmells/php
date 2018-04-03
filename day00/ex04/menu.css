@@ -1,0 +1,81 @@
+.pool_c
+{
+	width: 12%;
+	float: left;
+}
+
+.pool_php
+{
+	width: 14%;
+	float: left;
+}
+
+.pool_cpp
+{
+	width: 14%;
+	float: left;
+}
+
+.dropdown_c {background-color: #01DFD7;}
+
+.dropdown_php {background-color: #FE642E;}
+
+.dropdown_cpp {background-color: #2EFE64;}
+
+.dropdown
+{
+	cursor: pointer;
+	color: white;
+	border: none;
+	font-family: verdana;
+	font-size: 20px;
+	padding: 15px 35px 15px 35px;
+}
+
+.challenge
+{
+	display: none;
+	margin-left: 5px;
+	margin-right: 5px;
+	direction: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 150px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.challenge_c a
+{
+	color: #01DFD7;
+}
+
+.challenge_php a
+{
+	color: #FE642E;
+}
+
+.challenge_cpp a
+{
+	color: #2EFE64;
+}
+
+.challenge a
+{
+	display: block;
+	text-decoration: none;
+	padding: 5px 0px 5px 10px;
+	font-family: verdana;
+}
+
+.challenge_c a:hover {background-color: #E0F8F7;}
+
+.challenge_php a:hover {background-color: #F5ECCE;}
+
+.challenge_cpp a:hover {background-color: #E0F8E6;}
+
+.pool_c:hover .challenge_c {display: block;}
+
+.pool_php:hover .challenge_php {display: block;}
+
+.pool_cpp:hover .challenge_cpp {display: block;}

@@ -1,0 +1,181 @@
+body 
+{
+	background-color: #505050;
+}
+
+#doft_img
+{
+	margin-left: 1%;
+	margin-top: 0.7%;
+	width: 30%;
+	height: 75%;
+}
+
+#loupe
+{
+	float: right;
+	margin-top: -7.5%;
+	margin-right: -47%;
+	width: 250px;
+	height: 155px;
+}
+
+#reload
+{
+	float: right;
+	margin-right: 0.8%;
+	margin-left: 47%;
+	margin-top: 0.5%;
+	width: 1.5%;
+	height: 15%;
+}
+
+#close
+{
+	float: right;
+	margin-right: 0.8%;
+	margin-left: 47%;
+	margin-top: -0.5%;
+	width: 1.5%;
+	height: 15%;
+}
+
+.head
+{
+	margin-top: 1%;
+	background-color: #909090;
+	width: 1420px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 12px;
+	height: 135px;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.8);
+}
+
+#cluster_img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.container
+{
+	width: 1350px;
+	height: 570px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cluster
+{
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1000px;
+	height: 570px;
+	border: 10px solid #909090;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.8);
+}
+
+#l_img
+{
+	width: 70px;
+	margin-left: 35px;
+	margin-top: 12px;
+}
+
+.oeil
+{
+	width: 70px;
+	margin-left: 35px;
+	margin-top: 5px;
+	border: 5px solid red;
+	border-radius: 5px;
+}
+
+.left
+{
+	float: left;
+	width: 140px;
+	height: 430px;
+	background-color: #909090;
+	border-radius: 12px;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.8);
+}
+
+#r_img
+{
+	width: 70px;
+	margin-left: 35px;
+	margin-top: 12px;
+}
+
+.wall
+{
+	width: 120px;
+	height: 70px;
+	background-image: url(resources/brick.jpg);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.right
+{
+	float: right;
+	width: 140px;
+	height: 430px;
+	background-color: #909090;
+	border-radius: 12px;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.8);
+	margin-top: -590px;
+}
+
+#input_1
+{
+	width: 382px;
+	margin-top: 4px;
+}
+
+#button
+{
+	width: 80px;
+	margin-left: 5px;
+}
+
+#entrez
+{
+	font-size: 38px;
+	font-family: georgia;
+}
+
+#bonjour
+{
+	font-style: italic;
+}
+
+.form_div p
+{
+	font-size: 16px;
+	font-family: verdana;
+	margin-top: -1px;
+	margin-bottom: 0;
+}
+
+#shadow
+{
+	text-shadow: 5px 4px 4px rgba(255, 0, 0, 2);
+}
+
+.form_div
+{
+	position: absolute;
+	margin-left: -78px;
+	margin-top: -80px;
+	width: 510px;
+	height: 170px;
+	background-color: #88FF89;
+	border-radius: 10px;
+	padding-left: 12px;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.8);
+}
