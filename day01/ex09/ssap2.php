@@ -10,36 +10,45 @@ function ft_split($str) {
 function priority($a, $b) {
 	$a = strtolower($a);
 	$b = strtolower($b);
-	echo $a;
-	if (($a[0] >= 'a' && $a[0] <= 'z') && ($b[0] >= 'a' && $b[0] <= 'z'))
-		if ($a < $b)
+	$i = 0;
+	$j = 0;
+	while ($a[$i] && $b[$i]) {
+		if (($a[$i] >= 'a' && $a[$i] <= 'z') && ($b[$j] >= 'a' && $b[$j] <= 'z')) {
+			if ($a[$i] > $b[$j])
+				return (1);
+			else if ($a[$i] < $b[$j])
+				return (-1);
+		}
+		if (($a[$i] >= '0' && $a[$i] <= '9') && ($b[$j] >= '0' && $b[$j] <= '9')) {
+			if ($a[$i] > $b[$j])
+				return (1);
+			else if ($a[$i] < $b[$j])
+				return (-1);
+		}
+		if (($a[$i] < '0' || $a[$i] > '9') && ($a[$i] < 'a' || $a[$i] > 'z') && ($b[$j] < '0' || $b[$j] > '9') && ($b[$j] < 'a' || $b[$j] > 'z')) {
+			if ($a[$i] > $b[$j])
+				return (1);
+			else if ($a[$i] < $b[$j])
+				return (-1);
+		}
+		if (($a[$i] >= 'a' && $a[$i] <= 'z') && ($b[$j] >= '0' && $b[$j] <= '9')) 
 			return (-1);
-		else if ($a > $b)
+		if (($a[$i] >= '0' && $a[$i] <= '9') && ($b[$j] >= 'a' && $b[$j] <= 'z')) 
 			return (1);
-		else
-			return (0);
-		//return ($a < $b) ? -1 : 1;
-	//else if (($a[0] >= 'a' && $a[0] <= 'z') && !($b[0] >= 'a' && $b[0] <= 'z'))
-	//	return (1);
-	//else if (!($a[0] >= 'a' && $a[0] <= 'z') && ($b[0] >= 'a' && $b[0] <= 'z'))
-	//	return (-1);
-	/*else if (($a[0] >= '0' && $a[0] <= '9') && ($b[0] >= 'a' && $b[0] <= 'z'))
-		return (-1);
-	else if (($a[0] >= 'a' && $a[0] <= 'z') && ($b[0] >= '0' && $b[0] <= '9'))
-		return (-1);
-	else if (($a[0] >= '0' && $a[0] <= '9') && ($b[0] >= '0' && $b[0] <= '9'))
-		return ($a < $b) ? -1 : 1;
-	else if (($a[0] < '0' && $a[0] > '9') && ($a[0] < 'a' && $a[0] > 'z') &&
-		($b[0] >= '0' && $b[0] <= '9') || ($b[0] >= 'a' && $b[0] <= 'z'))
-		return (-1);
-	else if (($b[0] < '0' && $b[0] > '9') && ($b[0] < 'a' && $b[0] > 'z') &&
-		($a[0] >= '0' && $a[0] <= '9') || ($a[0] >= 'a' && $a[0] <= 'z'))
-		return (1);
-	else if (($a[0] < '0' && $a[0] > '9') && ($a[0] < 'a' && $a[0] > 'z') &&
-		($b[0] < '0' && $b[0] > '9') && ($b[0] < 'a' && $b[0] > 'z'))
-		return ($a < $b) ? -1 : 1;*/
-	return (0);
-}
+		if (($a[$i] >='a' && $a[$i] <= 'z') && ($b[$j] < '0' || $b[$j] > '9') && ($b[$j] < 'a' || $b[$j] > 'z'))
+			return (-1);
+		if (($b[$j] >='a' && $b[$j] <= 'z') && ($a[$i] < '0' || $a[$i] > '9') && ($a[$i] < 'a' || $a[$i] > 'z'))
+			return (1);
+		if (($a[$i] >='0' && $a[$i] <= '9') && ($b[$j] < '0' || $b[$j] > '9') && ($b[$j] < 'a' || $b[$j] > 'z'))
+			return (-1);
+		if (($b[$j] >='0' && $b[$j] <= '9') && ($a[$i] < '0' || $a[$i] > '9') && ($a[$i] < 'a' || $a[$i] > 'z'))
+			return (1);
+		$i++;
+		$j++;
+	}
+	if ($i == $j)
+		return (0);
+}	
 $array = array("");
 $i = 1;
 while ($argv[$i]) {
@@ -51,20 +60,10 @@ while ($argv[$i]) {
 	}
 	$i++;
 }
-//usort($array, "priority");
-$alph = array("");
-$num = array("");
-$symb = array("");
-$j = 1;
-while ($array[$j]) {
-	if (($array[$j][0] >= 'a' && $array[$j][0] <= 'z') || ($array[$j][0] >= 'A' && $array[$j][0] <= 'Z'))
-		array_push($alph, $array[$j]);
-	else if ($array[$j][0] >= '0' && $array[$j][0] <= '9')
-		array_push($num, $array[$j]);
-	else
-		array_push($symb, $array[$j]);
-	$j++;
+array_shift($array);
+usort($array, "priority");
+foreach ($array as $elem) {
+	echo $elem;
+	echo "\n";
 }
-usort($alph, "priority");
-print_r($alph);
 ?>
