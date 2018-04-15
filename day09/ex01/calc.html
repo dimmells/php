@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+		input, select
+		{
+			width: 115px;
+			height: 50px;
+			font-size: 40px;
+		}
+		select
+		{
+			width: 70px;
+		}
+		#calc
+		{
+			width: 320px;
+			height: 500px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		h1
+		{
+			text-align: center;
+		}
+		#button
+		{
+			width: 320px;
+		}
+	</style>
+	<script type="text/javascript">
+		setInterval(function(){ alert("Please, use me..."); }, 30000);
+		function solve() {
+			var right = document.getElementById('right').value;
+			var left = document.getElementById('left').value;
+			var sign = document.getElementById('select').value;
+			if (isNaN(right) || isNaN(left)) {
+				alert("Error :(");
+				return;
+			}
+			if (!(Number.isInteger(parseFloat(left, 10)))) {
+				alert("Error :(");
+				return;
+			}
+			if (!(Number.isInteger(parseFloat(right, 10)))) {
+				alert("Error :(");
+				return;
+			}
+			right = parseInt(right, 10);
+			left = parseInt(left, 10);
+			if (left < 0 || right < 0) {
+				alert("Error :(");
+				return;
+			}
+			if (sign == "+") {
+				var result = left + right;
+				alert(result);
+				console.log(result);
+			}
+			if (sign == "-") {
+				var result = left - right;
+				alert(result);
+				console.log(result);
+			}
+			if (sign == "*") {
+				var result = left * right;
+				alert(result);
+				console.log(result);
+			}
+			if (sign == "/") {
+				var result = left / right;
+				if (right > 0) {
+					alert(result);
+				}
+				else {
+					alert("It’s over 9000!");
+				}
+				console.log(result);
+			}
+			if (sign == "%") {
+				var result = left % right;
+				if (right > 0) {
+					alert(result);
+				}
+				else {
+					alert("It’s over 9000!");
+				}
+				console.log(result);
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Calculator</h1>
+	<div id="calc">
+		<input id="left" type="text" name="left_member">
+		<select id="select">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+			<option>%</option>
+		</select>
+		<input id="right" type="text" name="right_member">
+		<input id="button" type="submit" name="try_me" value="Try me!" onclick="solve()">
+	</div>
+</body>
+</html>

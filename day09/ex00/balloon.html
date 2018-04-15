@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ballon</title>
+	<style type="text/css">
+		#balloon {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			border-radius: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 30%;
+		}
+	</style>
+	<script type="text/javascript">
+		function changeSize() {
+			var	balloon = document.getElementById("balloon");
+			var size = balloon.offsetWidth;
+			var bg = balloon.style.backgroundColor;
+			size += 10;
+			if (size <= 420) {
+				size += 'px';
+				balloon.style.width = size;
+				balloon.style.height = size;
+			}
+			else if (size > 420) {
+				balloon.style.width = '200px';
+				balloon.style.height = '200px';
+			}
+			if (bg == 'red' || bg == "") {
+				balloon.style.backgroundColor = 'green';
+			}
+			else if (bg == 'green') {
+				balloon.style.backgroundColor = 'blue';
+			}
+			else if (bg == 'blue') {
+				balloon.style.backgroundColor = 'red';
+			}
+			console.log(balloon.style.width);
+		}
+		function shrinkBalloon() {
+			var	balloon = document.getElementById("balloon");
+			var size = document.getElementById("balloon").offsetWidth;
+			var bg = balloon.style.backgroundColor;
+			if (size >= 205) {
+				size -= 5;
+				size += 'px'
+				balloon.style.width = size;
+				balloon.style.height = size;
+			}
+			if (bg == 'red' || bg == "") {
+				balloon.style.backgroundColor = 'blue';
+			}
+			else if (bg == 'green') {
+				balloon.style.backgroundColor = 'red';
+			}
+			else if (bg == 'blue') {
+				balloon.style.backgroundColor = 'green';
+			}
+			console.log(balloon.style.width);
+		}
+	</script>
+</head>
+<body>
+	<div id="balloon" onclick="changeSize()" onmouseleave="shrinkBalloon()"></div>
+</body>
+</html>
